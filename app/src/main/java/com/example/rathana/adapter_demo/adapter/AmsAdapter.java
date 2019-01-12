@@ -83,6 +83,12 @@ public class AmsAdapter extends RecyclerView.Adapter<AmsAdapter.ViewHolder> {
         notifyItemRemoved(position);
     }
 
+    public void reSetArticles(List<Article> articles) {
+        this.articles.clear();
+        this.articles.addAll(articles);
+        notifyDataSetChanged();
+    }
+
     class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView thumb,favorite,btnDelete;
